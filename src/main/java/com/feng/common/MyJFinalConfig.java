@@ -18,7 +18,7 @@ public class MyJFinalConfig extends JFinalConfig {
      */
     public void configConstant(Constants me) {
         me.setDevMode(true);//开发模式设置
-        me.setBaseViewPath("META-NIF/template");//页面模板根路径
+        me.setBaseViewPath("META-INF/template");//页面模板根路径
         me.setFreeMarkerViewExtension(".ftl");//freemarker 模板后缀名
     }
 
@@ -28,7 +28,7 @@ public class MyJFinalConfig extends JFinalConfig {
      * @param me
      */
     public void configRoute(Routes me) {
-
+        me.add("/", IndexController.class);//添加项目路由，类似于struts的action 配置文件，此处配置controller名，action名称对应方法名
     }
 
     /**
